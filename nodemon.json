@@ -1,5 +1,17 @@
 {
   "watch": ["src"],
+  "ignore": ["**/test/**", "**/docs/**"],
   "ext": "ts",
-  "exec": "ts-node ./src/server.ts"
+  "exec": "tsc && node ./dist/server.js",
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "restartable": "rs",
+  "delay": "1000",
+  "legacy-watch": false,
+  "verbose": true,
+  "signal": "SIGTERM",
+  "events": {
+    "restart": "echo 'Application restarted due to file changes...'"
+  }
 }
