@@ -17,7 +17,8 @@ export default {
   testPathIgnorePatterns: ["<rootDir>/node_modules"],
   coverageReporters: ["json", "html"],
   testMatch: [
-    "<rootDir>/__tests__/**/*.test.ts",
-    "<rootDir>/?(*.)+(spec|test).ts"
-  ],
+    "<rootDir>/__tests__/**/*.{test,spec}.ts",
+    "<rootDir>/tests/**/*.{test,spec}.ts",
+    "<rootDir>/src/**/*.{test,spec}.ts"
+  ]
 }
